@@ -31,6 +31,9 @@ public class Scraper {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--window-size=1920,1080");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
 
         WebDriver driver = new ChromeDriver(options);
 
